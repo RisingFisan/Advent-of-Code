@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Day1 {
     public static void main(String[] args) {
         int answer1 = part1();
-        System.out.println(String.format("Answer to part 1: %d",answer1));
+        System.out.printf("Answer to part 1: %d\n",answer1);
         int answer2 = part2();
-        System.out.println(String.format("Answer to part 2: %d",answer2));
+        System.out.printf("Answer to part 2: %d\n",answer2);
     }
 
     public static int part1() {
