@@ -1,7 +1,7 @@
 part1 :: IO Int
 part1 = do
     file <- readFile "Day1Input.txt"
-    let final_floor = foldl (\acc inst -> if inst == '(' then acc + 1 else acc - 1) 0 file
+    let final_floor = foldr (\inst -> if inst == '(' then (+) 1 else flip (-) 1) 0 file
     print "Answer to part 1:"
     return final_floor
 
