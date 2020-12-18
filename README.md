@@ -8,15 +8,15 @@ My solutions to the [Advent of Code](https://adventofcode.com) puzzles. I try to
 
 ## 2020
 
-### Day 1 - [Python](<2020/Day 1/main.py>), [Haskell](<2020/Day 1/main.hs>), [Rust](<2020/Day 1/rust/src/main.rs>);
-### Day 2 - [Python](<2020/Day 2/main.py>);
-### Day 3 - [Python](<2020/Day 3/main.py>);
-### Day 4 - [Python](<2020/Day 4/main.py>);
-### Day 5 - [Python](<2020/Day 5/main.py>);
-### Day 6 - [Python](<2020/Day 6/main.py>);
-### Day 7 - [Python](<2020/Day 7/main.py>);
-### Day 8 - [Python](<2020/Day 8/main.py>);
-### Day 9 - [Python](<2020/Day 9/main.py>);
+### Day 1 - [Python](<2020/Day 01/main.py>), [Haskell](<2020/Day 01/main.hs>), [Rust](<2020/Day 01/rust/src/main.rs>);
+### Day 2 - [Python](<2020/Day 02/main.py>);
+### Day 3 - [Python](<2020/Day 03/main.py>);
+### Day 4 - [Python](<2020/Day 04/main.py>);
+### Day 5 - [Python](<2020/Day 05/main.py>);
+### Day 6 - [Python](<2020/Day 06/main.py>);
+### Day 7 - [Python](<2020/Day 07/main.py>);
+### Day 8 - [Python](<2020/Day 08/main.py>);
+### Day 9 - [Python](<2020/Day 09/main.py>);
 ### Day 10 - [Python](<2020/Day 10/main.py>);
 ### Day 11 - [Python](<2020/Day 11/main.py>);
 ### Day 12 - [Python](<2020/Day 12/main.py>);
