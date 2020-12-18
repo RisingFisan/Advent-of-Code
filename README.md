@@ -1,5 +1,5 @@
 # Advent-of-Code
-My solutions to the Advent of Code (adventofcode.com) puzzles. I try to solve the puzzles in as many programming languages as I can, from the ones that I have experience with. 
+My solutions to the [Advent of Code](https://adventofcode.com) puzzles. I try to solve the puzzles in as many programming languages as I can, from the ones that I have experience with. 
 
 ## 2015
 
