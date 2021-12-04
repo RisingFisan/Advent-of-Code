@@ -1,3 +1,7 @@
 *.exe
 *.class
 *.jar
+.vscode
+debug/
+rls/
+target/
