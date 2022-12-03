@@ -1,5 +1,3 @@
-import Control.Arrow ( (>>>) )
-
 convert :: String -> Int
 convert "A" = 0
 convert "B" = 1
@@ -11,7 +9,7 @@ convert "Z" = 2
 parseInput :: String -> IO [(Int, Int)]
 parseInput filename = 
     flip fmap (readFile filename)
-    $ lines >>> map ((\(a:b:_) -> (a,b)) . map convert . words)
+    $ map ((\(a:b:_) -> (a,b)) . map convert . words) . lines
 
 part1 :: [(Int, Int)] -> Int
 part1 = foldr (\(a,b) acc -> acc + b + 1 + 
