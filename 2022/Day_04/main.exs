@@ -8,7 +8,7 @@ defmodule Day_04 do
       |> tl
       |> Enum.map(&String.to_integer/1)
       |> then(fn [elf1_i, elf1_f, elf2_i, elf2_f] ->
-        {MapSet.new(Enum.to_list(elf1_i..elf1_f)), MapSet.new(Enum.to_list(elf2_i..elf2_f))}
+        {MapSet.new(elf1_i..elf1_f), MapSet.new(elf2_i..elf2_f)}
       end)
     end)
   end
