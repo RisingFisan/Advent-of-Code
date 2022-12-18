@@ -36,23 +36,26 @@ defmodule Day_18 do
 
     # pretty_print(input, bounds)
 
-    Enum.reduce(input, 0, fn {x,y,z}, covered ->
-      covered + Enum.reduce([
+    Enum.map(input, fn {x,y,z} ->
+      Enum.map([
         {x+1,y,z},
         {x-1,y,z},
         {x,y+1,z},
         {x,y-1,z},
         {x,y,z+1},
         {x,y,z-1}
-      ], 0, fn point, cov ->
-        cov + if in_exterior?(point, input, bounds), do: 0, else: 1
+      ], fn point ->
+        Task.async(fn -> in_exterior?(point, input, bounds) end)
       end)
     end)
+    |> Enum.concat()
+    |> Task.await_many()
+    |> Enum.sum()
     |> (&(MapSet.size(input) * 6 - &1)).()
   end
 
   def in_exterior?(point, points, bounds) do
-    not MapSet.member?(points, point) and bfs(point, points, bounds)
+    if (not MapSet.member?(points, point) and bfs(point, points, bounds)), do: 0, else: 1
   end
 
   def bfs(start, points, bounds) do
