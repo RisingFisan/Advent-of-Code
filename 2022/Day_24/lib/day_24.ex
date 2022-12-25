@@ -53,6 +53,7 @@ defmodule Day_24 do
 
   def part1(input) do
     Enum.reduce_while(Stream.iterate(0, & &1+1), {input.blizzards, [input.start]}, fn i, {blizzards, queue} ->
+      new_blizzards = move_blizzards(blizzards, input)
       new_queue = for {x,y} <- queue do
         [
           {x + 1, y},
@@ -61,7 +62,7 @@ defmodule Day_24 do
           {x, y - 1}
         ]
         |> Enum.filter(fn {x,y} ->
-          not (Enum.any?(blizzards, fn {x2, y2, _} -> {x,y} == {x2,y2} end))
+          not (Enum.any?(new_blizzards, fn {x2, y2, _} -> {x,y} == {x2,y2} end))
           and ((x > input.min_x
           and x < input.max_x
           and y > input.min_y
@@ -69,19 +70,20 @@ defmodule Day_24 do
         end)
       end
       |> Enum.concat
-      |> Kernel.++(Enum.filter(queue, fn {x,y} -> not Enum.any?(blizzards, fn {x2, y2, _} -> {x,y} == {x2,y2} end) end))
+      |> Kernel.++(Enum.filter(queue, fn {x,y} -> not Enum.any?(new_blizzards, fn {x2, y2, _} -> {x,y} == {x2,y2} end) end))
       |> Enum.uniq()
       # IO.inspect({i, length(new_queue)})
       if input.end in new_queue do
-        {:halt, {blizzards, i}}
+        {:halt, {new_blizzards, i+1}}
       else
-        {:cont, {move_blizzards(blizzards, input), new_queue}}
+        {:cont, {new_blizzards, new_queue}}
       end
     end)
   end
 
   def part2(input, t) do
     {new_blizzards, new_t} = Enum.reduce_while(Stream.iterate(t, & &1+1), {input.blizzards, [input.end]}, fn i, {blizzards, queue} ->
+      new_blizzards = move_blizzards(blizzards, input)
       new_queue = for {x,y} <- queue do
         [
           {x + 1, y},
@@ -90,7 +92,7 @@ defmodule Day_24 do
           {x, y - 1}
         ]
         |> Enum.filter(fn {x,y} ->
-          not (Enum.any?(blizzards, fn {x2, y2, _} -> {x,y} == {x2,y2} end))
+          not (Enum.any?(new_blizzards, fn {x2, y2, _} -> {x,y} == {x2,y2} end))
           and ((x > input.min_x
           and x < input.max_x
           and y > input.min_y
@@ -98,16 +100,17 @@ defmodule Day_24 do
         end)
       end
       |> Enum.concat
-      |> Kernel.++(Enum.filter(queue, fn {x,y} -> not Enum.any?(blizzards, fn {x2, y2, _} -> {x,y} == {x2,y2} end) end))
+      |> Kernel.++(Enum.filter(queue, fn {x,y} -> not Enum.any?(new_blizzards, fn {x2, y2, _} -> {x,y} == {x2,y2} end) end))
       |> Enum.uniq()
       if input.start in new_queue do
-        {:halt, {blizzards, i}}
+        {:halt, {new_blizzards, i+1}}
       else
-        {:cont, {move_blizzards(blizzards, input), new_queue}}
+        {:cont, {new_blizzards, new_queue}}
       end
     end)
 
     Enum.reduce_while(Stream.iterate(new_t, & &1+1), {new_blizzards, [input.start]}, fn i, {blizzards, queue} ->
+      new_blizzards = move_blizzards(blizzards, input)
       new_queue = for {x,y} <- queue do
         [
           {x + 1, y},
@@ -116,7 +119,7 @@ defmodule Day_24 do
           {x, y - 1}
         ]
         |> Enum.filter(fn {x,y} ->
-          not (Enum.any?(blizzards, fn {x2, y2, _} -> {x,y} == {x2,y2} end))
+          not (Enum.any?(new_blizzards, fn {x2, y2, _} -> {x,y} == {x2,y2} end))
           and ((x > input.min_x
           and x < input.max_x
           and y > input.min_y
@@ -124,13 +127,13 @@ defmodule Day_24 do
         end)
       end
       |> Enum.concat
-      |> Kernel.++(Enum.filter(queue, fn {x,y} -> not Enum.any?(blizzards, fn {x2, y2, _} -> {x,y} == {x2,y2} end) end))
+      |> Kernel.++(Enum.filter(queue, fn {x,y} -> not Enum.any?(new_blizzards, fn {x2, y2, _} -> {x,y} == {x2,y2} end) end))
       |> Enum.uniq()
       # IO.inspect({i, length(new_queue)})
       if input.end in new_queue do
-        {:halt, i}
+        {:halt, i+1}
       else
-        {:cont, {move_blizzards(blizzards, input), new_queue}}
+        {:cont, {new_blizzards, new_queue}}
       end
     end)
   end
