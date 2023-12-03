@@ -1,5 +1,5 @@
 defmodule Day_03 do
-  @priorities (Enum.zip(Enum.to_list(?a..?z) ++ Enum.to_list(?A..?Z), 1..52)
+  @priorities (Enum.zip(Enum.concat(?a..?z, ?A..?Z), 1..52)
     |> Map.new)
 
   def parse_input(filename) do

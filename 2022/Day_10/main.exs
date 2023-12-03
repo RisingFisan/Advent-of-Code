@@ -30,7 +30,6 @@ defmodule Day_10 do
     input.crt
     |> Enum.chunk_every(40)
     |> Enum.join("\n")
-    |> IO.puts()
   end
 
   def main do
@@ -39,7 +38,7 @@ defmodule Day_10 do
     result = run(parsed_input)
 
     IO.inspect(part1(result), label: "Part 1")
-    IO.inspect(part2(result), label: "Part 2")
+    IO.puts("Part 2:\n" <> part2(result))
   end
 end
 

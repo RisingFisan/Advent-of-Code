@@ -1,5 +1,4 @@
 import Data.List
-import Data.Function ((&))
 import Control.Arrow ((>>>))
 
 import Data.List.Split

@@ -36,12 +36,8 @@ for i in range(100):
     for tile in tiles:
         t_neighbors = neighbors(tile)
         black_neighbors = [tiles.get(n,"w") for n in t_neighbors].count("b")
-        if tiles[tile] == "b" and (black_neighbors == 0 or black_neighbors in range(3,7)):
-            new_tiles[tile] = "w"
-        elif tiles[tile] == "w" and black_neighbors == 2:
+        if tiles[tile] == "b" and black_neighbors in range(1,3) or tiles[tile] == "w" and black_neighbors == 2:
             new_tiles[tile] = "b"
-        else:
-            new_tiles[tile] = tiles[tile]
     tiles = new_tiles
     print("Day", i+1, "=", list(tiles.values()).count("b"))
 

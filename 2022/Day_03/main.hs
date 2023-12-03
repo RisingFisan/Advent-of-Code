@@ -31,8 +31,7 @@ part2 =
         Set.intersection sack1 sack2
         & Set.intersection sack3
         & Set.elemAt 0
-        & (Map.!) priorities
-        )
+        & (Map.!) priorities)
     >>> sum
 
 main = do
