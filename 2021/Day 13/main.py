@@ -56,7 +56,7 @@ max_y = max(p[1] for p in new_dots)
 
 for y in range(max_y+1):
     for x in range(max_x+1):
-        print("#" if (x,y) in new_dots else " ", end='')
+        print("█" if (x,y) in new_dots else " ", end='')
     print('')
 
 

@@ -43,11 +43,13 @@ class Packet:
         return self.number
 
     def __str__(self) -> str:
-        header = f"Version: {self.version}; Type ID: {self.type}; "
-        if self.type == 4:
-            return header + f"Number: {self.number}"
-        else:
-            return header + "\nChildren:\n" + '\n'.join('\n'.join('\t' + c for c in str(child).splitlines()) for child in self.children)
+        char = {
+            0: 'Σ', 1: 'Π', 2: 'min', 3: 'max', 4: 'n', 5: '>', 6: '<', 7: '=='
+        }[self.type]
+        header = f"v{self.version} {char}" + f" = {self.number}"
+        if self.type != 4:
+            header += "\n" + '\n'.join('\n'.join('|' + ('-- ' if c[0] != '|' else '   ') + c for c in str(child).splitlines()) for child in self.children)
+        return header
 
 packet : Packet = None
 
@@ -98,14 +100,15 @@ def read_packet(binary) -> tuple[Packet, str]:
 
 (packet, _) = read_packet(binary)
 
-# for packet in packets:
-#     print(packet)
-
 def part1(packet : Packet):
     vn = packet.version
     for child in packet.children:
         vn += part1(child)
     return vn
 
+# print(packet)
+
 print(f"Part 1: {part1(packet)}")
 print(f"Part 2: {packet.get_number()}")
+
+# print(packet)

@@ -1,0 +1,18 @@
+board has many spots:
+
+A_top
+A_bot
+B_top
+B_bot
+C_top
+C_bot
+D_top
+D_bot
+
+left_stack_top
+left_stack_bot
+A_B
+B_C
+C_D
+right_stack_top
+right_stack_bot

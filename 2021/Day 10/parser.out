@@ -1,0 +1,1106 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    END
+
+Grammar
+
+Rule 0     S' -> line
+Rule 1     line -> chunks
+Rule 2     chunks -> chunks chunk
+Rule 3     chunks -> chunk
+Rule 4     chunk -> OP chunks CP
+Rule 5     chunk -> OB chunks CB
+Rule 6     chunk -> OC chunks CC
+Rule 7     chunk -> OA chunks CA
+Rule 8     chunk -> OP CP
+Rule 9     chunk -> OB CB
+Rule 10    chunk -> OC CC
+Rule 11    chunk -> OA CA
+Rule 12    chunk -> OP chunks CB
+Rule 13    chunk -> OP chunks CC
+Rule 14    chunk -> OP chunks CA
+Rule 15    chunk -> OP CB
+Rule 16    chunk -> OP CC
+Rule 17    chunk -> OP CA
+Rule 18    chunk -> OB chunks CP
+Rule 19    chunk -> OB chunks CC
+Rule 20    chunk -> OB chunks CA
+Rule 21    chunk -> OB CP
+Rule 22    chunk -> OB CC
+Rule 23    chunk -> OB CA
+Rule 24    chunk -> OC chunks CB
+Rule 25    chunk -> OC chunks CP
+Rule 26    chunk -> OC chunks CA
+Rule 27    chunk -> OC CB
+Rule 28    chunk -> OC CP
+Rule 29    chunk -> OC CA
+Rule 30    chunk -> OA chunks CB
+Rule 31    chunk -> OA chunks CC
+Rule 32    chunk -> OA chunks CP
+Rule 33    chunk -> OA CB
+Rule 34    chunk -> OA CC
+Rule 35    chunk -> OA CP
+
+Terminals, with rules where they appear
+
+CA                   : 7 11 14 17 20 23 26 29
+CB                   : 5 9 12 15 24 27 30 33
+CC                   : 6 10 13 16 19 22 31 34
+CP                   : 4 8 18 21 25 28 32 35
+END                  : 
+OA                   : 7 11 30 31 32 33 34 35
+OB                   : 5 9 18 19 20 21 22 23
+OC                   : 6 10 24 25 26 27 28 29
+OP                   : 4 8 12 13 14 15 16 17
+error                : 
+
+Nonterminals, with rules where they appear
+
+chunk                : 2 3
+chunks               : 1 2 4 5 6 7 12 13 14 18 19 20 24 25 26 30 31 32
+line                 : 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . line
+    (1) line -> . chunks
+    (2) chunks -> . chunks chunk
+    (3) chunks -> . chunk
+    (4) chunk -> . OP chunks CP
+    (5) chunk -> . OB chunks CB
+    (6) chunk -> . OC chunks CC
+    (7) chunk -> . OA chunks CA
+    (8) chunk -> . OP CP
+    (9) chunk -> . OB CB
+    (10) chunk -> . OC CC
+    (11) chunk -> . OA CA
+    (12) chunk -> . OP chunks CB
+    (13) chunk -> . OP chunks CC
+    (14) chunk -> . OP chunks CA
+    (15) chunk -> . OP CB
+    (16) chunk -> . OP CC
+    (17) chunk -> . OP CA
+    (18) chunk -> . OB chunks CP
+    (19) chunk -> . OB chunks CC
+    (20) chunk -> . OB chunks CA
+    (21) chunk -> . OB CP
+    (22) chunk -> . OB CC
+    (23) chunk -> . OB CA
+    (24) chunk -> . OC chunks CB
+    (25) chunk -> . OC chunks CP
+    (26) chunk -> . OC chunks CA
+    (27) chunk -> . OC CB
+    (28) chunk -> . OC CP
+    (29) chunk -> . OC CA
+    (30) chunk -> . OA chunks CB
+    (31) chunk -> . OA chunks CC
+    (32) chunk -> . OA chunks CP
+    (33) chunk -> . OA CB
+    (34) chunk -> . OA CC
+    (35) chunk -> . OA CP
+
+    OP              shift and go to state 4
+    OB              shift and go to state 5
+    OC              shift and go to state 6
+    OA              shift and go to state 7
+
+    line                           shift and go to state 1
+    chunks                         shift and go to state 2
+    chunk                          shift and go to state 3
+
+state 1
+
+    (0) S' -> line .
+
+
+
+state 2
+
+    (1) line -> chunks .
+    (2) chunks -> chunks . chunk
+    (4) chunk -> . OP chunks CP
+    (5) chunk -> . OB chunks CB
+    (6) chunk -> . OC chunks CC
+    (7) chunk -> . OA chunks CA
+    (8) chunk -> . OP CP
+    (9) chunk -> . OB CB
+    (10) chunk -> . OC CC
+    (11) chunk -> . OA CA
+    (12) chunk -> . OP chunks CB
+    (13) chunk -> . OP chunks CC
+    (14) chunk -> . OP chunks CA
+    (15) chunk -> . OP CB
+    (16) chunk -> . OP CC
+    (17) chunk -> . OP CA
+    (18) chunk -> . OB chunks CP
+    (19) chunk -> . OB chunks CC
+    (20) chunk -> . OB chunks CA
+    (21) chunk -> . OB CP
+    (22) chunk -> . OB CC
+    (23) chunk -> . OB CA
+    (24) chunk -> . OC chunks CB
+    (25) chunk -> . OC chunks CP
+    (26) chunk -> . OC chunks CA
+    (27) chunk -> . OC CB
+    (28) chunk -> . OC CP
+    (29) chunk -> . OC CA
+    (30) chunk -> . OA chunks CB
+    (31) chunk -> . OA chunks CC
+    (32) chunk -> . OA chunks CP
+    (33) chunk -> . OA CB
+    (34) chunk -> . OA CC
+    (35) chunk -> . OA CP
+
+    $end            reduce using rule 1 (line -> chunks .)
+    OP              shift and go to state 4
+    OB              shift and go to state 5
+    OC              shift and go to state 6
+    OA              shift and go to state 7
+
+    chunk                          shift and go to state 8
+
+state 3
+
+    (3) chunks -> chunk .
+
+    OP              reduce using rule 3 (chunks -> chunk .)
+    OB              reduce using rule 3 (chunks -> chunk .)
+    OC              reduce using rule 3 (chunks -> chunk .)
+    OA              reduce using rule 3 (chunks -> chunk .)
+    $end            reduce using rule 3 (chunks -> chunk .)
+    CP              reduce using rule 3 (chunks -> chunk .)
+    CB              reduce using rule 3 (chunks -> chunk .)
+    CC              reduce using rule 3 (chunks -> chunk .)
+    CA              reduce using rule 3 (chunks -> chunk .)
+
+
+state 4
+
+    (4) chunk -> OP . chunks CP
+    (8) chunk -> OP . CP
+    (12) chunk -> OP . chunks CB
+    (13) chunk -> OP . chunks CC
+    (14) chunk -> OP . chunks CA
+    (15) chunk -> OP . CB
+    (16) chunk -> OP . CC
+    (17) chunk -> OP . CA
+    (2) chunks -> . chunks chunk
+    (3) chunks -> . chunk
+    (4) chunk -> . OP chunks CP
+    (5) chunk -> . OB chunks CB
+    (6) chunk -> . OC chunks CC
+    (7) chunk -> . OA chunks CA
+    (8) chunk -> . OP CP
+    (9) chunk -> . OB CB
+    (10) chunk -> . OC CC
+    (11) chunk -> . OA CA
+    (12) chunk -> . OP chunks CB
+    (13) chunk -> . OP chunks CC
+    (14) chunk -> . OP chunks CA
+    (15) chunk -> . OP CB
+    (16) chunk -> . OP CC
+    (17) chunk -> . OP CA
+    (18) chunk -> . OB chunks CP
+    (19) chunk -> . OB chunks CC
+    (20) chunk -> . OB chunks CA
+    (21) chunk -> . OB CP
+    (22) chunk -> . OB CC
+    (23) chunk -> . OB CA
+    (24) chunk -> . OC chunks CB
+    (25) chunk -> . OC chunks CP
+    (26) chunk -> . OC chunks CA
+    (27) chunk -> . OC CB
+    (28) chunk -> . OC CP
+    (29) chunk -> . OC CA
+    (30) chunk -> . OA chunks CB
+    (31) chunk -> . OA chunks CC
+    (32) chunk -> . OA chunks CP
+    (33) chunk -> . OA CB
+    (34) chunk -> . OA CC
+    (35) chunk -> . OA CP
+
+    CP              shift and go to state 10
+    CB              shift and go to state 11
+    CC              shift and go to state 12
+    CA              shift and go to state 13
+    OP              shift and go to state 4
+    OB              shift and go to state 5
+    OC              shift and go to state 6
+    OA              shift and go to state 7
+
+    chunks                         shift and go to state 9
+    chunk                          shift and go to state 3
+
+state 5
+
+    (5) chunk -> OB . chunks CB
+    (9) chunk -> OB . CB
+    (18) chunk -> OB . chunks CP
+    (19) chunk -> OB . chunks CC
+    (20) chunk -> OB . chunks CA
+    (21) chunk -> OB . CP
+    (22) chunk -> OB . CC
+    (23) chunk -> OB . CA
+    (2) chunks -> . chunks chunk
+    (3) chunks -> . chunk
+    (4) chunk -> . OP chunks CP
+    (5) chunk -> . OB chunks CB
+    (6) chunk -> . OC chunks CC
+    (7) chunk -> . OA chunks CA
+    (8) chunk -> . OP CP
+    (9) chunk -> . OB CB
+    (10) chunk -> . OC CC
+    (11) chunk -> . OA CA
+    (12) chunk -> . OP chunks CB
+    (13) chunk -> . OP chunks CC
+    (14) chunk -> . OP chunks CA
+    (15) chunk -> . OP CB
+    (16) chunk -> . OP CC
+    (17) chunk -> . OP CA
+    (18) chunk -> . OB chunks CP
+    (19) chunk -> . OB chunks CC
+    (20) chunk -> . OB chunks CA
+    (21) chunk -> . OB CP
+    (22) chunk -> . OB CC
+    (23) chunk -> . OB CA
+    (24) chunk -> . OC chunks CB
+    (25) chunk -> . OC chunks CP
+    (26) chunk -> . OC chunks CA
+    (27) chunk -> . OC CB
+    (28) chunk -> . OC CP
+    (29) chunk -> . OC CA
+    (30) chunk -> . OA chunks CB
+    (31) chunk -> . OA chunks CC
+    (32) chunk -> . OA chunks CP
+    (33) chunk -> . OA CB
+    (34) chunk -> . OA CC
+    (35) chunk -> . OA CP
+
+    CB              shift and go to state 15
+    CP              shift and go to state 16
+    CC              shift and go to state 17
+    CA              shift and go to state 18
+    OP              shift and go to state 4
+    OB              shift and go to state 5
+    OC              shift and go to state 6
+    OA              shift and go to state 7
+
+    chunks                         shift and go to state 14
+    chunk                          shift and go to state 3
+
+state 6
+
+    (6) chunk -> OC . chunks CC
+    (10) chunk -> OC . CC
+    (24) chunk -> OC . chunks CB
+    (25) chunk -> OC . chunks CP
+    (26) chunk -> OC . chunks CA
+    (27) chunk -> OC . CB
+    (28) chunk -> OC . CP
+    (29) chunk -> OC . CA
+    (2) chunks -> . chunks chunk
+    (3) chunks -> . chunk
+    (4) chunk -> . OP chunks CP
+    (5) chunk -> . OB chunks CB
+    (6) chunk -> . OC chunks CC
+    (7) chunk -> . OA chunks CA
+    (8) chunk -> . OP CP
+    (9) chunk -> . OB CB
+    (10) chunk -> . OC CC
+    (11) chunk -> . OA CA
+    (12) chunk -> . OP chunks CB
+    (13) chunk -> . OP chunks CC
+    (14) chunk -> . OP chunks CA
+    (15) chunk -> . OP CB
+    (16) chunk -> . OP CC
+    (17) chunk -> . OP CA
+    (18) chunk -> . OB chunks CP
+    (19) chunk -> . OB chunks CC
+    (20) chunk -> . OB chunks CA
+    (21) chunk -> . OB CP
+    (22) chunk -> . OB CC
+    (23) chunk -> . OB CA
+    (24) chunk -> . OC chunks CB
+    (25) chunk -> . OC chunks CP
+    (26) chunk -> . OC chunks CA
+    (27) chunk -> . OC CB
+    (28) chunk -> . OC CP
+    (29) chunk -> . OC CA
+    (30) chunk -> . OA chunks CB
+    (31) chunk -> . OA chunks CC
+    (32) chunk -> . OA chunks CP
+    (33) chunk -> . OA CB
+    (34) chunk -> . OA CC
+    (35) chunk -> . OA CP
+
+    CC              shift and go to state 20
+    CB              shift and go to state 21
+    CP              shift and go to state 22
+    CA              shift and go to state 23
+    OP              shift and go to state 4
+    OB              shift and go to state 5
+    OC              shift and go to state 6
+    OA              shift and go to state 7
+
+    chunks                         shift and go to state 19
+    chunk                          shift and go to state 3
+
+state 7
+
+    (7) chunk -> OA . chunks CA
+    (11) chunk -> OA . CA
+    (30) chunk -> OA . chunks CB
+    (31) chunk -> OA . chunks CC
+    (32) chunk -> OA . chunks CP
+    (33) chunk -> OA . CB
+    (34) chunk -> OA . CC
+    (35) chunk -> OA . CP
+    (2) chunks -> . chunks chunk
+    (3) chunks -> . chunk
+    (4) chunk -> . OP chunks CP
+    (5) chunk -> . OB chunks CB
+    (6) chunk -> . OC chunks CC
+    (7) chunk -> . OA chunks CA
+    (8) chunk -> . OP CP
+    (9) chunk -> . OB CB
+    (10) chunk -> . OC CC
+    (11) chunk -> . OA CA
+    (12) chunk -> . OP chunks CB
+    (13) chunk -> . OP chunks CC
+    (14) chunk -> . OP chunks CA
+    (15) chunk -> . OP CB
+    (16) chunk -> . OP CC
+    (17) chunk -> . OP CA
+    (18) chunk -> . OB chunks CP
+    (19) chunk -> . OB chunks CC
+    (20) chunk -> . OB chunks CA
+    (21) chunk -> . OB CP
+    (22) chunk -> . OB CC
+    (23) chunk -> . OB CA
+    (24) chunk -> . OC chunks CB
+    (25) chunk -> . OC chunks CP
+    (26) chunk -> . OC chunks CA
+    (27) chunk -> . OC CB
+    (28) chunk -> . OC CP
+    (29) chunk -> . OC CA
+    (30) chunk -> . OA chunks CB
+    (31) chunk -> . OA chunks CC
+    (32) chunk -> . OA chunks CP
+    (33) chunk -> . OA CB
+    (34) chunk -> . OA CC
+    (35) chunk -> . OA CP
+
+    CA              shift and go to state 25
+    CB              shift and go to state 26
+    CC              shift and go to state 27
+    CP              shift and go to state 28
+    OP              shift and go to state 4
+    OB              shift and go to state 5
+    OC              shift and go to state 6
+    OA              shift and go to state 7
+
+    chunks                         shift and go to state 24
+    chunk                          shift and go to state 3
+
+state 8
+
+    (2) chunks -> chunks chunk .
+
+    OP              reduce using rule 2 (chunks -> chunks chunk .)
+    OB              reduce using rule 2 (chunks -> chunks chunk .)
+    OC              reduce using rule 2 (chunks -> chunks chunk .)
+    OA              reduce using rule 2 (chunks -> chunks chunk .)
+    $end            reduce using rule 2 (chunks -> chunks chunk .)
+    CP              reduce using rule 2 (chunks -> chunks chunk .)
+    CB              reduce using rule 2 (chunks -> chunks chunk .)
+    CC              reduce using rule 2 (chunks -> chunks chunk .)
+    CA              reduce using rule 2 (chunks -> chunks chunk .)
+
+
+state 9
+
+    (4) chunk -> OP chunks . CP
+    (12) chunk -> OP chunks . CB
+    (13) chunk -> OP chunks . CC
+    (14) chunk -> OP chunks . CA
+    (2) chunks -> chunks . chunk
+    (4) chunk -> . OP chunks CP
+    (5) chunk -> . OB chunks CB
+    (6) chunk -> . OC chunks CC
+    (7) chunk -> . OA chunks CA
+    (8) chunk -> . OP CP
+    (9) chunk -> . OB CB
+    (10) chunk -> . OC CC
+    (11) chunk -> . OA CA
+    (12) chunk -> . OP chunks CB
+    (13) chunk -> . OP chunks CC
+    (14) chunk -> . OP chunks CA
+    (15) chunk -> . OP CB
+    (16) chunk -> . OP CC
+    (17) chunk -> . OP CA
+    (18) chunk -> . OB chunks CP
+    (19) chunk -> . OB chunks CC
+    (20) chunk -> . OB chunks CA
+    (21) chunk -> . OB CP
+    (22) chunk -> . OB CC
+    (23) chunk -> . OB CA
+    (24) chunk -> . OC chunks CB
+    (25) chunk -> . OC chunks CP
+    (26) chunk -> . OC chunks CA
+    (27) chunk -> . OC CB
+    (28) chunk -> . OC CP
+    (29) chunk -> . OC CA
+    (30) chunk -> . OA chunks CB
+    (31) chunk -> . OA chunks CC
+    (32) chunk -> . OA chunks CP
+    (33) chunk -> . OA CB
+    (34) chunk -> . OA CC
+    (35) chunk -> . OA CP
+
+    CP              shift and go to state 29
+    CB              shift and go to state 30
+    CC              shift and go to state 31
+    CA              shift and go to state 32
+    OP              shift and go to state 4
+    OB              shift and go to state 5
+    OC              shift and go to state 6
+    OA              shift and go to state 7
+
+    chunk                          shift and go to state 8
+
+state 10
+
+    (8) chunk -> OP CP .
+
+    OP              reduce using rule 8 (chunk -> OP CP .)
+    OB              reduce using rule 8 (chunk -> OP CP .)
+    OC              reduce using rule 8 (chunk -> OP CP .)
+    OA              reduce using rule 8 (chunk -> OP CP .)
+    $end            reduce using rule 8 (chunk -> OP CP .)
+    CP              reduce using rule 8 (chunk -> OP CP .)
+    CB              reduce using rule 8 (chunk -> OP CP .)
+    CC              reduce using rule 8 (chunk -> OP CP .)
+    CA              reduce using rule 8 (chunk -> OP CP .)
+
+
+state 11
+
+    (15) chunk -> OP CB .
+
+    OP              reduce using rule 15 (chunk -> OP CB .)
+    OB              reduce using rule 15 (chunk -> OP CB .)
+    OC              reduce using rule 15 (chunk -> OP CB .)
+    OA              reduce using rule 15 (chunk -> OP CB .)
+    $end            reduce using rule 15 (chunk -> OP CB .)
+    CP              reduce using rule 15 (chunk -> OP CB .)
+    CB              reduce using rule 15 (chunk -> OP CB .)
+    CC              reduce using rule 15 (chunk -> OP CB .)
+    CA              reduce using rule 15 (chunk -> OP CB .)
+
+
+state 12
+
+    (16) chunk -> OP CC .
+
+    OP              reduce using rule 16 (chunk -> OP CC .)
+    OB              reduce using rule 16 (chunk -> OP CC .)
+    OC              reduce using rule 16 (chunk -> OP CC .)
+    OA              reduce using rule 16 (chunk -> OP CC .)
+    $end            reduce using rule 16 (chunk -> OP CC .)
+    CP              reduce using rule 16 (chunk -> OP CC .)
+    CB              reduce using rule 16 (chunk -> OP CC .)
+    CC              reduce using rule 16 (chunk -> OP CC .)
+    CA              reduce using rule 16 (chunk -> OP CC .)
+
+
+state 13
+
+    (17) chunk -> OP CA .
+
+    OP              reduce using rule 17 (chunk -> OP CA .)
+    OB              reduce using rule 17 (chunk -> OP CA .)
+    OC              reduce using rule 17 (chunk -> OP CA .)
+    OA              reduce using rule 17 (chunk -> OP CA .)
+    $end            reduce using rule 17 (chunk -> OP CA .)
+    CP              reduce using rule 17 (chunk -> OP CA .)
+    CB              reduce using rule 17 (chunk -> OP CA .)
+    CC              reduce using rule 17 (chunk -> OP CA .)
+    CA              reduce using rule 17 (chunk -> OP CA .)
+
+
+state 14
+
+    (5) chunk -> OB chunks . CB
+    (18) chunk -> OB chunks . CP
+    (19) chunk -> OB chunks . CC
+    (20) chunk -> OB chunks . CA
+    (2) chunks -> chunks . chunk
+    (4) chunk -> . OP chunks CP
+    (5) chunk -> . OB chunks CB
+    (6) chunk -> . OC chunks CC
+    (7) chunk -> . OA chunks CA
+    (8) chunk -> . OP CP
+    (9) chunk -> . OB CB
+    (10) chunk -> . OC CC
+    (11) chunk -> . OA CA
+    (12) chunk -> . OP chunks CB
+    (13) chunk -> . OP chunks CC
+    (14) chunk -> . OP chunks CA
+    (15) chunk -> . OP CB
+    (16) chunk -> . OP CC
+    (17) chunk -> . OP CA
+    (18) chunk -> . OB chunks CP
+    (19) chunk -> . OB chunks CC
+    (20) chunk -> . OB chunks CA
+    (21) chunk -> . OB CP
+    (22) chunk -> . OB CC
+    (23) chunk -> . OB CA
+    (24) chunk -> . OC chunks CB
+    (25) chunk -> . OC chunks CP
+    (26) chunk -> . OC chunks CA
+    (27) chunk -> . OC CB
+    (28) chunk -> . OC CP
+    (29) chunk -> . OC CA
+    (30) chunk -> . OA chunks CB
+    (31) chunk -> . OA chunks CC
+    (32) chunk -> . OA chunks CP
+    (33) chunk -> . OA CB
+    (34) chunk -> . OA CC
+    (35) chunk -> . OA CP
+
+    CB              shift and go to state 33
+    CP              shift and go to state 34
+    CC              shift and go to state 35
+    CA              shift and go to state 36
+    OP              shift and go to state 4
+    OB              shift and go to state 5
+    OC              shift and go to state 6
+    OA              shift and go to state 7
+
+    chunk                          shift and go to state 8
+
+state 15
+
+    (9) chunk -> OB CB .
+
+    OP              reduce using rule 9 (chunk -> OB CB .)
+    OB              reduce using rule 9 (chunk -> OB CB .)
+    OC              reduce using rule 9 (chunk -> OB CB .)
+    OA              reduce using rule 9 (chunk -> OB CB .)
+    $end            reduce using rule 9 (chunk -> OB CB .)
+    CP              reduce using rule 9 (chunk -> OB CB .)
+    CB              reduce using rule 9 (chunk -> OB CB .)
+    CC              reduce using rule 9 (chunk -> OB CB .)
+    CA              reduce using rule 9 (chunk -> OB CB .)
+
+
+state 16
+
+    (21) chunk -> OB CP .
+
+    OP              reduce using rule 21 (chunk -> OB CP .)
+    OB              reduce using rule 21 (chunk -> OB CP .)
+    OC              reduce using rule 21 (chunk -> OB CP .)
+    OA              reduce using rule 21 (chunk -> OB CP .)
+    $end            reduce using rule 21 (chunk -> OB CP .)
+    CP              reduce using rule 21 (chunk -> OB CP .)
+    CB              reduce using rule 21 (chunk -> OB CP .)
+    CC              reduce using rule 21 (chunk -> OB CP .)
+    CA              reduce using rule 21 (chunk -> OB CP .)
+
+
+state 17
+
+    (22) chunk -> OB CC .
+
+    OP              reduce using rule 22 (chunk -> OB CC .)
+    OB              reduce using rule 22 (chunk -> OB CC .)
+    OC              reduce using rule 22 (chunk -> OB CC .)
+    OA              reduce using rule 22 (chunk -> OB CC .)
+    $end            reduce using rule 22 (chunk -> OB CC .)
+    CP              reduce using rule 22 (chunk -> OB CC .)
+    CB              reduce using rule 22 (chunk -> OB CC .)
+    CC              reduce using rule 22 (chunk -> OB CC .)
+    CA              reduce using rule 22 (chunk -> OB CC .)
+
+
+state 18
+
+    (23) chunk -> OB CA .
+
+    OP              reduce using rule 23 (chunk -> OB CA .)
+    OB              reduce using rule 23 (chunk -> OB CA .)
+    OC              reduce using rule 23 (chunk -> OB CA .)
+    OA              reduce using rule 23 (chunk -> OB CA .)
+    $end            reduce using rule 23 (chunk -> OB CA .)
+    CP              reduce using rule 23 (chunk -> OB CA .)
+    CB              reduce using rule 23 (chunk -> OB CA .)
+    CC              reduce using rule 23 (chunk -> OB CA .)
+    CA              reduce using rule 23 (chunk -> OB CA .)
+
+
+state 19
+
+    (6) chunk -> OC chunks . CC
+    (24) chunk -> OC chunks . CB
+    (25) chunk -> OC chunks . CP
+    (26) chunk -> OC chunks . CA
+    (2) chunks -> chunks . chunk
+    (4) chunk -> . OP chunks CP
+    (5) chunk -> . OB chunks CB
+    (6) chunk -> . OC chunks CC
+    (7) chunk -> . OA chunks CA
+    (8) chunk -> . OP CP
+    (9) chunk -> . OB CB
+    (10) chunk -> . OC CC
+    (11) chunk -> . OA CA
+    (12) chunk -> . OP chunks CB
+    (13) chunk -> . OP chunks CC
+    (14) chunk -> . OP chunks CA
+    (15) chunk -> . OP CB
+    (16) chunk -> . OP CC
+    (17) chunk -> . OP CA
+    (18) chunk -> . OB chunks CP
+    (19) chunk -> . OB chunks CC
+    (20) chunk -> . OB chunks CA
+    (21) chunk -> . OB CP
+    (22) chunk -> . OB CC
+    (23) chunk -> . OB CA
+    (24) chunk -> . OC chunks CB
+    (25) chunk -> . OC chunks CP
+    (26) chunk -> . OC chunks CA
+    (27) chunk -> . OC CB
+    (28) chunk -> . OC CP
+    (29) chunk -> . OC CA
+    (30) chunk -> . OA chunks CB
+    (31) chunk -> . OA chunks CC
+    (32) chunk -> . OA chunks CP
+    (33) chunk -> . OA CB
+    (34) chunk -> . OA CC
+    (35) chunk -> . OA CP
+
+    CC              shift and go to state 37
+    CB              shift and go to state 38
+    CP              shift and go to state 39
+    CA              shift and go to state 40
+    OP              shift and go to state 4
+    OB              shift and go to state 5
+    OC              shift and go to state 6
+    OA              shift and go to state 7
+
+    chunk                          shift and go to state 8
+
+state 20
+
+    (10) chunk -> OC CC .
+
+    OP              reduce using rule 10 (chunk -> OC CC .)
+    OB              reduce using rule 10 (chunk -> OC CC .)
+    OC              reduce using rule 10 (chunk -> OC CC .)
+    OA              reduce using rule 10 (chunk -> OC CC .)
+    $end            reduce using rule 10 (chunk -> OC CC .)
+    CP              reduce using rule 10 (chunk -> OC CC .)
+    CB              reduce using rule 10 (chunk -> OC CC .)
+    CC              reduce using rule 10 (chunk -> OC CC .)
+    CA              reduce using rule 10 (chunk -> OC CC .)
+
+
+state 21
+
+    (27) chunk -> OC CB .
+
+    OP              reduce using rule 27 (chunk -> OC CB .)
+    OB              reduce using rule 27 (chunk -> OC CB .)
+    OC              reduce using rule 27 (chunk -> OC CB .)
+    OA              reduce using rule 27 (chunk -> OC CB .)
+    $end            reduce using rule 27 (chunk -> OC CB .)
+    CP              reduce using rule 27 (chunk -> OC CB .)
+    CB              reduce using rule 27 (chunk -> OC CB .)
+    CC              reduce using rule 27 (chunk -> OC CB .)
+    CA              reduce using rule 27 (chunk -> OC CB .)
+
+
+state 22
+
+    (28) chunk -> OC CP .
+
+    OP              reduce using rule 28 (chunk -> OC CP .)
+    OB              reduce using rule 28 (chunk -> OC CP .)
+    OC              reduce using rule 28 (chunk -> OC CP .)
+    OA              reduce using rule 28 (chunk -> OC CP .)
+    $end            reduce using rule 28 (chunk -> OC CP .)
+    CP              reduce using rule 28 (chunk -> OC CP .)
+    CB              reduce using rule 28 (chunk -> OC CP .)
+    CC              reduce using rule 28 (chunk -> OC CP .)
+    CA              reduce using rule 28 (chunk -> OC CP .)
+
+
+state 23
+
+    (29) chunk -> OC CA .
+
+    OP              reduce using rule 29 (chunk -> OC CA .)
+    OB              reduce using rule 29 (chunk -> OC CA .)
+    OC              reduce using rule 29 (chunk -> OC CA .)
+    OA              reduce using rule 29 (chunk -> OC CA .)
+    $end            reduce using rule 29 (chunk -> OC CA .)
+    CP              reduce using rule 29 (chunk -> OC CA .)
+    CB              reduce using rule 29 (chunk -> OC CA .)
+    CC              reduce using rule 29 (chunk -> OC CA .)
+    CA              reduce using rule 29 (chunk -> OC CA .)
+
+
+state 24
+
+    (7) chunk -> OA chunks . CA
+    (30) chunk -> OA chunks . CB
+    (31) chunk -> OA chunks . CC
+    (32) chunk -> OA chunks . CP
+    (2) chunks -> chunks . chunk
+    (4) chunk -> . OP chunks CP
+    (5) chunk -> . OB chunks CB
+    (6) chunk -> . OC chunks CC
+    (7) chunk -> . OA chunks CA
+    (8) chunk -> . OP CP
+    (9) chunk -> . OB CB
+    (10) chunk -> . OC CC
+    (11) chunk -> . OA CA
+    (12) chunk -> . OP chunks CB
+    (13) chunk -> . OP chunks CC
+    (14) chunk -> . OP chunks CA
+    (15) chunk -> . OP CB
+    (16) chunk -> . OP CC
+    (17) chunk -> . OP CA
+    (18) chunk -> . OB chunks CP
+    (19) chunk -> . OB chunks CC
+    (20) chunk -> . OB chunks CA
+    (21) chunk -> . OB CP
+    (22) chunk -> . OB CC
+    (23) chunk -> . OB CA
+    (24) chunk -> . OC chunks CB
+    (25) chunk -> . OC chunks CP
+    (26) chunk -> . OC chunks CA
+    (27) chunk -> . OC CB
+    (28) chunk -> . OC CP
+    (29) chunk -> . OC CA
+    (30) chunk -> . OA chunks CB
+    (31) chunk -> . OA chunks CC
+    (32) chunk -> . OA chunks CP
+    (33) chunk -> . OA CB
+    (34) chunk -> . OA CC
+    (35) chunk -> . OA CP
+
+    CA              shift and go to state 41
+    CB              shift and go to state 42
+    CC              shift and go to state 43
+    CP              shift and go to state 44
+    OP              shift and go to state 4
+    OB              shift and go to state 5
+    OC              shift and go to state 6
+    OA              shift and go to state 7
+
+    chunk                          shift and go to state 8
+
+state 25
+
+    (11) chunk -> OA CA .
+
+    OP              reduce using rule 11 (chunk -> OA CA .)
+    OB              reduce using rule 11 (chunk -> OA CA .)
+    OC              reduce using rule 11 (chunk -> OA CA .)
+    OA              reduce using rule 11 (chunk -> OA CA .)
+    $end            reduce using rule 11 (chunk -> OA CA .)
+    CP              reduce using rule 11 (chunk -> OA CA .)
+    CB              reduce using rule 11 (chunk -> OA CA .)
+    CC              reduce using rule 11 (chunk -> OA CA .)
+    CA              reduce using rule 11 (chunk -> OA CA .)
+
+
+state 26
+
+    (33) chunk -> OA CB .
+
+    OP              reduce using rule 33 (chunk -> OA CB .)
+    OB              reduce using rule 33 (chunk -> OA CB .)
+    OC              reduce using rule 33 (chunk -> OA CB .)
+    OA              reduce using rule 33 (chunk -> OA CB .)
+    $end            reduce using rule 33 (chunk -> OA CB .)
+    CP              reduce using rule 33 (chunk -> OA CB .)
+    CB              reduce using rule 33 (chunk -> OA CB .)
+    CC              reduce using rule 33 (chunk -> OA CB .)
+    CA              reduce using rule 33 (chunk -> OA CB .)
+
+
+state 27
+
+    (34) chunk -> OA CC .
+
+    OP              reduce using rule 34 (chunk -> OA CC .)
+    OB              reduce using rule 34 (chunk -> OA CC .)
+    OC              reduce using rule 34 (chunk -> OA CC .)
+    OA              reduce using rule 34 (chunk -> OA CC .)
+    $end            reduce using rule 34 (chunk -> OA CC .)
+    CP              reduce using rule 34 (chunk -> OA CC .)
+    CB              reduce using rule 34 (chunk -> OA CC .)
+    CC              reduce using rule 34 (chunk -> OA CC .)
+    CA              reduce using rule 34 (chunk -> OA CC .)
+
+
+state 28
+
+    (35) chunk -> OA CP .
+
+    OP              reduce using rule 35 (chunk -> OA CP .)
+    OB              reduce using rule 35 (chunk -> OA CP .)
+    OC              reduce using rule 35 (chunk -> OA CP .)
+    OA              reduce using rule 35 (chunk -> OA CP .)
+    $end            reduce using rule 35 (chunk -> OA CP .)
+    CP              reduce using rule 35 (chunk -> OA CP .)
+    CB              reduce using rule 35 (chunk -> OA CP .)
+    CC              reduce using rule 35 (chunk -> OA CP .)
+    CA              reduce using rule 35 (chunk -> OA CP .)
+
+
+state 29
+
+    (4) chunk -> OP chunks CP .
+
+    OP              reduce using rule 4 (chunk -> OP chunks CP .)
+    OB              reduce using rule 4 (chunk -> OP chunks CP .)
+    OC              reduce using rule 4 (chunk -> OP chunks CP .)
+    OA              reduce using rule 4 (chunk -> OP chunks CP .)
+    $end            reduce using rule 4 (chunk -> OP chunks CP .)
+    CP              reduce using rule 4 (chunk -> OP chunks CP .)
+    CB              reduce using rule 4 (chunk -> OP chunks CP .)
+    CC              reduce using rule 4 (chunk -> OP chunks CP .)
+    CA              reduce using rule 4 (chunk -> OP chunks CP .)
+
+
+state 30
+
+    (12) chunk -> OP chunks CB .
+
+    OP              reduce using rule 12 (chunk -> OP chunks CB .)
+    OB              reduce using rule 12 (chunk -> OP chunks CB .)
+    OC              reduce using rule 12 (chunk -> OP chunks CB .)
+    OA              reduce using rule 12 (chunk -> OP chunks CB .)
+    $end            reduce using rule 12 (chunk -> OP chunks CB .)
+    CP              reduce using rule 12 (chunk -> OP chunks CB .)
+    CB              reduce using rule 12 (chunk -> OP chunks CB .)
+    CC              reduce using rule 12 (chunk -> OP chunks CB .)
+    CA              reduce using rule 12 (chunk -> OP chunks CB .)
+
+
+state 31
+
+    (13) chunk -> OP chunks CC .
+
+    OP              reduce using rule 13 (chunk -> OP chunks CC .)
+    OB              reduce using rule 13 (chunk -> OP chunks CC .)
+    OC              reduce using rule 13 (chunk -> OP chunks CC .)
+    OA              reduce using rule 13 (chunk -> OP chunks CC .)
+    $end            reduce using rule 13 (chunk -> OP chunks CC .)
+    CP              reduce using rule 13 (chunk -> OP chunks CC .)
+    CB              reduce using rule 13 (chunk -> OP chunks CC .)
+    CC              reduce using rule 13 (chunk -> OP chunks CC .)
+    CA              reduce using rule 13 (chunk -> OP chunks CC .)
+
+
+state 32
+
+    (14) chunk -> OP chunks CA .
+
+    OP              reduce using rule 14 (chunk -> OP chunks CA .)
+    OB              reduce using rule 14 (chunk -> OP chunks CA .)
+    OC              reduce using rule 14 (chunk -> OP chunks CA .)
+    OA              reduce using rule 14 (chunk -> OP chunks CA .)
+    $end            reduce using rule 14 (chunk -> OP chunks CA .)
+    CP              reduce using rule 14 (chunk -> OP chunks CA .)
+    CB              reduce using rule 14 (chunk -> OP chunks CA .)
+    CC              reduce using rule 14 (chunk -> OP chunks CA .)
+    CA              reduce using rule 14 (chunk -> OP chunks CA .)
+
+
+state 33
+
+    (5) chunk -> OB chunks CB .
+
+    OP              reduce using rule 5 (chunk -> OB chunks CB .)
+    OB              reduce using rule 5 (chunk -> OB chunks CB .)
+    OC              reduce using rule 5 (chunk -> OB chunks CB .)
+    OA              reduce using rule 5 (chunk -> OB chunks CB .)
+    $end            reduce using rule 5 (chunk -> OB chunks CB .)
+    CP              reduce using rule 5 (chunk -> OB chunks CB .)
+    CB              reduce using rule 5 (chunk -> OB chunks CB .)
+    CC              reduce using rule 5 (chunk -> OB chunks CB .)
+    CA              reduce using rule 5 (chunk -> OB chunks CB .)
+
+
+state 34
+
+    (18) chunk -> OB chunks CP .
+
+    OP              reduce using rule 18 (chunk -> OB chunks CP .)
+    OB              reduce using rule 18 (chunk -> OB chunks CP .)
+    OC              reduce using rule 18 (chunk -> OB chunks CP .)
+    OA              reduce using rule 18 (chunk -> OB chunks CP .)
+    $end            reduce using rule 18 (chunk -> OB chunks CP .)
+    CP              reduce using rule 18 (chunk -> OB chunks CP .)
+    CB              reduce using rule 18 (chunk -> OB chunks CP .)
+    CC              reduce using rule 18 (chunk -> OB chunks CP .)
+    CA              reduce using rule 18 (chunk -> OB chunks CP .)
+
+
+state 35
+
+    (19) chunk -> OB chunks CC .
+
+    OP              reduce using rule 19 (chunk -> OB chunks CC .)
+    OB              reduce using rule 19 (chunk -> OB chunks CC .)
+    OC              reduce using rule 19 (chunk -> OB chunks CC .)
+    OA              reduce using rule 19 (chunk -> OB chunks CC .)
+    $end            reduce using rule 19 (chunk -> OB chunks CC .)
+    CP              reduce using rule 19 (chunk -> OB chunks CC .)
+    CB              reduce using rule 19 (chunk -> OB chunks CC .)
+    CC              reduce using rule 19 (chunk -> OB chunks CC .)
+    CA              reduce using rule 19 (chunk -> OB chunks CC .)
+
+
+state 36
+
+    (20) chunk -> OB chunks CA .
+
+    OP              reduce using rule 20 (chunk -> OB chunks CA .)
+    OB              reduce using rule 20 (chunk -> OB chunks CA .)
+    OC              reduce using rule 20 (chunk -> OB chunks CA .)
+    OA              reduce using rule 20 (chunk -> OB chunks CA .)
+    $end            reduce using rule 20 (chunk -> OB chunks CA .)
+    CP              reduce using rule 20 (chunk -> OB chunks CA .)
+    CB              reduce using rule 20 (chunk -> OB chunks CA .)
+    CC              reduce using rule 20 (chunk -> OB chunks CA .)
+    CA              reduce using rule 20 (chunk -> OB chunks CA .)
+
+
+state 37
+
+    (6) chunk -> OC chunks CC .
+
+    OP              reduce using rule 6 (chunk -> OC chunks CC .)
+    OB              reduce using rule 6 (chunk -> OC chunks CC .)
+    OC              reduce using rule 6 (chunk -> OC chunks CC .)
+    OA              reduce using rule 6 (chunk -> OC chunks CC .)
+    $end            reduce using rule 6 (chunk -> OC chunks CC .)
+    CP              reduce using rule 6 (chunk -> OC chunks CC .)
+    CB              reduce using rule 6 (chunk -> OC chunks CC .)
+    CC              reduce using rule 6 (chunk -> OC chunks CC .)
+    CA              reduce using rule 6 (chunk -> OC chunks CC .)
+
+
+state 38
+
+    (24) chunk -> OC chunks CB .
+
+    OP              reduce using rule 24 (chunk -> OC chunks CB .)
+    OB              reduce using rule 24 (chunk -> OC chunks CB .)
+    OC              reduce using rule 24 (chunk -> OC chunks CB .)
+    OA              reduce using rule 24 (chunk -> OC chunks CB .)
+    $end            reduce using rule 24 (chunk -> OC chunks CB .)
+    CP              reduce using rule 24 (chunk -> OC chunks CB .)
+    CB              reduce using rule 24 (chunk -> OC chunks CB .)
+    CC              reduce using rule 24 (chunk -> OC chunks CB .)
+    CA              reduce using rule 24 (chunk -> OC chunks CB .)
+
+
+state 39
+
+    (25) chunk -> OC chunks CP .
+
+    OP              reduce using rule 25 (chunk -> OC chunks CP .)
+    OB              reduce using rule 25 (chunk -> OC chunks CP .)
+    OC              reduce using rule 25 (chunk -> OC chunks CP .)
+    OA              reduce using rule 25 (chunk -> OC chunks CP .)
+    $end            reduce using rule 25 (chunk -> OC chunks CP .)
+    CP              reduce using rule 25 (chunk -> OC chunks CP .)
+    CB              reduce using rule 25 (chunk -> OC chunks CP .)
+    CC              reduce using rule 25 (chunk -> OC chunks CP .)
+    CA              reduce using rule 25 (chunk -> OC chunks CP .)
+
+
+state 40
+
+    (26) chunk -> OC chunks CA .
+
+    OP              reduce using rule 26 (chunk -> OC chunks CA .)
+    OB              reduce using rule 26 (chunk -> OC chunks CA .)
+    OC              reduce using rule 26 (chunk -> OC chunks CA .)
+    OA              reduce using rule 26 (chunk -> OC chunks CA .)
+    $end            reduce using rule 26 (chunk -> OC chunks CA .)
+    CP              reduce using rule 26 (chunk -> OC chunks CA .)
+    CB              reduce using rule 26 (chunk -> OC chunks CA .)
+    CC              reduce using rule 26 (chunk -> OC chunks CA .)
+    CA              reduce using rule 26 (chunk -> OC chunks CA .)
+
+
+state 41
+
+    (7) chunk -> OA chunks CA .
+
+    OP              reduce using rule 7 (chunk -> OA chunks CA .)
+    OB              reduce using rule 7 (chunk -> OA chunks CA .)
+    OC              reduce using rule 7 (chunk -> OA chunks CA .)
+    OA              reduce using rule 7 (chunk -> OA chunks CA .)
+    $end            reduce using rule 7 (chunk -> OA chunks CA .)
+    CP              reduce using rule 7 (chunk -> OA chunks CA .)
+    CB              reduce using rule 7 (chunk -> OA chunks CA .)
+    CC              reduce using rule 7 (chunk -> OA chunks CA .)
+    CA              reduce using rule 7 (chunk -> OA chunks CA .)
+
+
+state 42
+
+    (30) chunk -> OA chunks CB .
+
+    OP              reduce using rule 30 (chunk -> OA chunks CB .)
+    OB              reduce using rule 30 (chunk -> OA chunks CB .)
+    OC              reduce using rule 30 (chunk -> OA chunks CB .)
+    OA              reduce using rule 30 (chunk -> OA chunks CB .)
+    $end            reduce using rule 30 (chunk -> OA chunks CB .)
+    CP              reduce using rule 30 (chunk -> OA chunks CB .)
+    CB              reduce using rule 30 (chunk -> OA chunks CB .)
+    CC              reduce using rule 30 (chunk -> OA chunks CB .)
+    CA              reduce using rule 30 (chunk -> OA chunks CB .)
+
+
+state 43
+
+    (31) chunk -> OA chunks CC .
+
+    OP              reduce using rule 31 (chunk -> OA chunks CC .)
+    OB              reduce using rule 31 (chunk -> OA chunks CC .)
+    OC              reduce using rule 31 (chunk -> OA chunks CC .)
+    OA              reduce using rule 31 (chunk -> OA chunks CC .)
+    $end            reduce using rule 31 (chunk -> OA chunks CC .)
+    CP              reduce using rule 31 (chunk -> OA chunks CC .)
+    CB              reduce using rule 31 (chunk -> OA chunks CC .)
+    CC              reduce using rule 31 (chunk -> OA chunks CC .)
+    CA              reduce using rule 31 (chunk -> OA chunks CC .)
+
+
+state 44
+
+    (32) chunk -> OA chunks CP .
+
+    OP              reduce using rule 32 (chunk -> OA chunks CP .)
+    OB              reduce using rule 32 (chunk -> OA chunks CP .)
+    OC              reduce using rule 32 (chunk -> OA chunks CP .)
+    OA              reduce using rule 32 (chunk -> OA chunks CP .)
+    $end            reduce using rule 32 (chunk -> OA chunks CP .)
+    CP              reduce using rule 32 (chunk -> OA chunks CP .)
+    CB              reduce using rule 32 (chunk -> OA chunks CP .)
+    CC              reduce using rule 32 (chunk -> OA chunks CP .)
+    CA              reduce using rule 32 (chunk -> OA chunks CP .)
+
