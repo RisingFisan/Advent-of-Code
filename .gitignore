@@ -8,3 +8,6 @@ target/
 2018/
 2019/
 2020/
+_build
+create_new_day.exs
+erl_crash.dump
